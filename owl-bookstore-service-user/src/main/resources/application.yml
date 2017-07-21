@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 7001
+spring:
+  application:
+    name: SERVICE-USER
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/owl-bookstore?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false
+    username: root
+    password: Snow103082..
+    dbcp2:
+      max-idle: 10
+mybatis:
+  type-aliases-package: cn.net.bysoft.owl.bookstore.facade.user.entity
+  mapperLocations: classpath:mapper/*.xml
+  configLocation: classpath:mybatis-config.xml
