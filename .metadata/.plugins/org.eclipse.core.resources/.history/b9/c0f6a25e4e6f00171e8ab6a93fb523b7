@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="owl-bookstore-facade-user">
-        <property name="context-root" value="owl-bookstore-facade-user"/>
-        <property name="java-output-path" value="/owl-bookstore-facade-user/target/classes"/>
-    </wb-module>
-</project-modules>

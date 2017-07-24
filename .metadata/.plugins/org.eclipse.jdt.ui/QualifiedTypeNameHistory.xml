@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-<fullyQualifiedTypeName name="cn.net.bysoft.owl.bookstore.facade.user.entity.User"/>
-<fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand"/>
-<fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.cache.annotation.CacheResult"/>
-<fullyQualifiedTypeName name="com.netflix.hystrix.contrib.javanica.cache.annotation.CacheKey"/>
-<fullyQualifiedTypeName name="java.io.Serializable"/>
-</qualifiedTypeNameHistroy>
