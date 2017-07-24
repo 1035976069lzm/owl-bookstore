@@ -7,5 +7,7 @@ public interface UserFacade {
 	Boolean isExistsByEmail(String email);
 
 	Boolean signUp(User user);
+	
+	User findById(Long id);
 
 }

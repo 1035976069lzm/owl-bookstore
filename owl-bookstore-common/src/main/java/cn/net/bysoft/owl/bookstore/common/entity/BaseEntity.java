@@ -1,8 +1,11 @@
 package cn.net.bysoft.owl.bookstore.common.entity;
 
-public abstract class BaseEntity {
+import java.io.Serializable;
 
-    private Long id;
+public abstract class BaseEntity implements Serializable {
+
+	private static final long serialVersionUID = -1105239108084459358L;
+	private Long id;
 
     public Long getId() {
         return id;

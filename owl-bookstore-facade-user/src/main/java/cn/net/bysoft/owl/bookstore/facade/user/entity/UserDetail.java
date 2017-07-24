@@ -4,7 +4,8 @@ import java.time.LocalDate;
 
 public class UserDetail extends User {
 
-    private String nickName;
+	private static final long serialVersionUID = -5572967638423848307L;
+	private String nickName;
     private String realName;
     private String cardNo;
     private LocalDate birthday;

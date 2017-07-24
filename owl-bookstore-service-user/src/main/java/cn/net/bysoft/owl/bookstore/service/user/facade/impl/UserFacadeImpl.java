@@ -29,4 +29,12 @@ public class UserFacadeImpl implements UserFacade {
         return userBiz.signUp(user);
     }
 
+    @RequestMapping(value = "/users/{id}")
+	@Override
+	public User findById(@PathVariable Long id) {
+		return userBiz.findById(id);
+	}
+    
+    
+
 }

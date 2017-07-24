@@ -18,7 +18,7 @@ public class UserService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	@HystrixCommand(fallbackMethod = "getAllFallback")
+	@HystrixCommand
 	public Boolean isExistsByEmail(String email) {
 		UriComponents uriComponents = UriComponentsBuilder.fromUriString("http://SERVICE-USER/users/{email}/").build()
 				.expand(email).encode();
@@ -26,14 +26,18 @@ public class UserService {
 		return restTemplate.getForObject(uri, Boolean.class);
 	}
 
+	@HystrixCommand
+	public User findById(Long id) {
+		UriComponents uriComponents = UriComponentsBuilder.fromUriString("http://SERVICE-USER/users/{id}").build()
+				.expand(id).encode();
+		URI uri = uriComponents.toUri();
+		return restTemplate.getForObject(uri, User.class);
+	}
+
 	public Boolean signUp(User user) {
 		UriComponents uriComponents = UriComponentsBuilder.fromUriString("http://SERVICE-USER/users").build().encode();
 		URI uri = uriComponents.toUri();
 		return restTemplate.postForObject(uri, user, Boolean.class);
 	}
-
-	protected Boolean getAllFallback(String email, Throwable e) {
-		return false;
-	}
-
+	
 }

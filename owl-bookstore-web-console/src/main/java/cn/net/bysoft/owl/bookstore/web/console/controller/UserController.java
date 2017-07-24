@@ -20,6 +20,11 @@ public class UserController {
     public Boolean isExists(@PathVariable String email) {
         return userService.isExistsByEmail(email);
     }
+    
+    @RequestMapping(value = "/users/{id}", method = RequestMethod.GET)
+	public User findById(@PathVariable Long id) {
+		return userService.findById(id);
+	}
 
     @RequestMapping(value = "/users", method = RequestMethod.POST)
     public Boolean signUp(@RequestBody User user) {
