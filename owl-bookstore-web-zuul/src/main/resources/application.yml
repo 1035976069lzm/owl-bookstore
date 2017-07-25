@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: web-zuul
+server:
+  port: 8888
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: OWL-BOOKSTORE-WEB-API
+    api-b:
+      path: /api-b/**
+      serviceId: OWL-BOOKSTORE-WEB-CONSOLE
